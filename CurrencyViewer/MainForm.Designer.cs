@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             this.mainMenuStrip = new System.Windows.Forms.MenuStrip();
-            this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.currenciesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exchangeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.accountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.favoritesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,7 +40,7 @@
             this.mainStatusStrip = new System.Windows.Forms.StatusStrip();
             this.timeStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.viewRoot = new System.Windows.Forms.Panel();
-            this.startToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exchangeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenuStrip.SuspendLayout();
             this.mainStatusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -50,8 +48,7 @@
             // mainMenuStrip
             // 
             this.mainMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.файлToolStripMenuItem,
-            this.currenciesToolStripMenuItem,
+            this.fileToolStripMenuItem,
             this.accountToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.mainMenuStrip.Location = new System.Drawing.Point(0, 0);
@@ -60,36 +57,21 @@
             this.mainMenuStrip.TabIndex = 0;
             this.mainMenuStrip.Text = "mainMenuStrip";
             // 
-            // файлToolStripMenuItem
+            // fileToolStripMenuItem
             // 
-            this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.startToolStripMenuItem,
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exchangeToolStripMenuItem,
             this.quitToolStripMenuItem});
-            this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
-            this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-            this.файлToolStripMenuItem.Text = "Файл";
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.fileToolStripMenuItem.Text = "Файл";
             // 
             // quitToolStripMenuItem
             // 
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.quitToolStripMenuItem.Text = "Выход";
             this.quitToolStripMenuItem.Click += new System.EventHandler(this.QuitToolStripMenuItem_Click);
-            // 
-            // currenciesToolStripMenuItem
-            // 
-            this.currenciesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exchangeToolStripMenuItem});
-            this.currenciesToolStripMenuItem.Name = "currenciesToolStripMenuItem";
-            this.currenciesToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
-            this.currenciesToolStripMenuItem.Text = "Валюты";
-            // 
-            // exchangeToolStripMenuItem
-            // 
-            this.exchangeToolStripMenuItem.Name = "exchangeToolStripMenuItem";
-            this.exchangeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.exchangeToolStripMenuItem.Text = "Текущий курс";
-            this.exchangeToolStripMenuItem.Click += new System.EventHandler(this.ExchangeToolStripMenuItem_Click);
             // 
             // accountToolStripMenuItem
             // 
@@ -161,12 +143,12 @@
             this.viewRoot.Size = new System.Drawing.Size(784, 415);
             this.viewRoot.TabIndex = 2;
             // 
-            // startToolStripMenuItem
+            // exchangeToolStripMenuItem
             // 
-            this.startToolStripMenuItem.Name = "startToolStripMenuItem";
-            this.startToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.startToolStripMenuItem.Text = "Начальная страница";
-            this.startToolStripMenuItem.Click += new System.EventHandler(this.startToolStripMenuItem_Click);
+            this.exchangeToolStripMenuItem.Name = "exchangeToolStripMenuItem";
+            this.exchangeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exchangeToolStripMenuItem.Text = "Текущий курс";
+            this.exchangeToolStripMenuItem.Click += new System.EventHandler(this.ExchangeToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -194,18 +176,16 @@
         private System.Windows.Forms.MenuStrip mainMenuStrip;
         private System.Windows.Forms.StatusStrip mainStatusStrip;
         private System.Windows.Forms.ToolStripStatusLabel timeStripStatusLabel;
-        private System.Windows.Forms.ToolStripMenuItem currenciesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem accountToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem файлToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exchangeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem favoritesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.Panel viewRoot;
-        private System.Windows.Forms.ToolStripMenuItem startToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exchangeToolStripMenuItem;
     }
 }
 

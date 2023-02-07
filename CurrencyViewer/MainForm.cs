@@ -28,6 +28,10 @@ namespace CurrencyViewer
             // Hide Auth-only components
             favoritesToolStripMenuItem.Visible = false;
             logoutToolStripMenuItem.Visible = false;
+
+            // Load start page
+            var currenciesForm = new CurrenciesForm(user, true);
+            SetView(currenciesForm, currenciesForm.viewPanel);
         }
 
         #region [ Methods ]
@@ -49,24 +53,13 @@ namespace CurrencyViewer
             currentView.view.Parent = viewRoot;
         }
 
-        private void ResetView()
-        {
-            if (currentView.form != null && currentView.view != null)
-            {
-                currentView.view.Parent = currentView.form;
-                currentView.form.Dispose();
-            }
-
-            currentView = (null, null);
-        }
-
         #endregion
 
         #region [ Events ]
 
         private void ExchangeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var currenciesForm = new CurrenciesForm();
+            var currenciesForm = new CurrenciesForm(user, false);
             SetView(currenciesForm, currenciesForm.viewPanel);
         }
 
@@ -79,7 +72,8 @@ namespace CurrencyViewer
 
         private void FavoritesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // TODO: Create form
+            var currenciesForm = new CurrenciesForm(user, true);
+            SetView(currenciesForm, currenciesForm.viewPanel);
         }
 
         private void LogoutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -89,6 +83,9 @@ namespace CurrencyViewer
             loginToolStripMenuItem.Visible = true;
             favoritesToolStripMenuItem.Visible = false;
             logoutToolStripMenuItem.Visible = false;
+
+            var currenciesForm = new CurrenciesForm(user, false);
+            SetView(currenciesForm, currenciesForm.viewPanel);
         }
 
         private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -102,12 +99,6 @@ namespace CurrencyViewer
             Close();
         }
 
-        private void startToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            // TODO: Show start page
-            ResetView();
-        }
-
         private void LoginForm_UserLoggedIn(User user)
         {
             this.user = user;
@@ -116,8 +107,8 @@ namespace CurrencyViewer
             favoritesToolStripMenuItem.Visible = true;
             logoutToolStripMenuItem.Visible = true;
 
-            // TODO: Show favourites page
-            ResetView();
+            var currenciesForm = new CurrenciesForm(user, true);
+            SetView(currenciesForm, currenciesForm.viewPanel);
         }
 
         #endregion

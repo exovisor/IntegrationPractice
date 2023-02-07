@@ -56,6 +56,9 @@
             this.currenciesDataGridView.ReadOnly = true;
             this.currenciesDataGridView.Size = new System.Drawing.Size(800, 450);
             this.currenciesDataGridView.TabIndex = 0;
+            this.currenciesDataGridView.Sorted += new System.EventHandler(this.CurrenciesDataGridView_Sorted);
+            this.currenciesDataGridView.Enter += new System.EventHandler(this.CurrenciesDataGridView_Enter);
+            this.currenciesDataGridView.Layout += new System.Windows.Forms.LayoutEventHandler(this.CurrenciesDataGridView_Layout);
             // 
             // CurrenciesForm
             // 
